@@ -49,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Intent lookForLocationIntent = new Intent(getApplicationContext(),MapsActivity.class);
+                lookForLocationIntent.putExtra("placeNumber", i);
                 startActivity(lookForLocationIntent);
             }
         });
